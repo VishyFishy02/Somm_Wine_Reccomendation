@@ -24,7 +24,7 @@ Our goal with this project is to build a wine recommendation engine to help user
 - [Cleaning and Preprocessing](#cleaning-and-preprocessing)
 - [Exploratory Data Analysis](#exploratory-data-analysis)
 - [Modelling](#modelling)
-- [Find your Wine!](#find-your-wine!)
+- [Find your Wine!](#find-your-wine)
 
 
 ### Data Set 
@@ -36,7 +36,7 @@ We obtained the [dataset](https://www.kaggle.com/datasets/zynicide/wine-reviews)
 
 ### Modelling
 
-### Find your Wine!
+### Find your Wine
 
 
 
