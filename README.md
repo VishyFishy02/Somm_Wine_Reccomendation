@@ -20,11 +20,11 @@ Our goal with this project is to build a wine recommendation engine to help user
 
 
 ## Table of Contents
-- [Know about our Data](### Data Set)
-- [Cleaning and Preprocessing]()
-- [Exploratory Data Analysis]()
-- [Modelling]()
-- [Find your Wine!]()
+- [Know about our Data](###data-set)
+- [Cleaning and Preprocessing](###cleaning-and-preprocessing)
+- [Exploratory Data Analysis](###exploratory-data-analysis)
+- [Modelling](###modelling)
+- [Find your Wine!](###-find-your-wine!)
 
 
 ### Data Set 
