@@ -1,5 +1,3 @@
-pip install sentence-transformers torch faiss-cpu
-
 import pandas as pd
 from sentence_transformers import SentenceTransformer
 import torch
