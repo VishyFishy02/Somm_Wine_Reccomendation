@@ -1,0 +1,49 @@
+body{
+    font-family: 'Merriweather', serf;
+}
+
+.centered-text{
+    text-align: center;
+    color: #4a2c36
+}
+
+.centered-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.title-margin{
+    margin-top: 30px;
+    color: #76323f;
+    font-size: 72px;
+}
+
+.submit-button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover{
+    background-color: #8B0000;
+    border-radius: 4px;
+    color: #fff;
+}
+
+input[type=text]:focus {
+    outline-color: #8B0000
+}
+
+@media screen and (max-width:768px){
+    .centered-container, .title-margin, .submit-button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

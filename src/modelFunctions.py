@@ -23,12 +23,13 @@ def load_embeddings_and_wine():
 
     # Convert the data to NumPy arrays for use with faiss
     vectors_np = knn_vectors.numpy()
-
     # Determine the dimension of the vectors
     dimension = vectors_np.shape[1]  # This represents the dimension of the vectors
+    faiss.normalize_L2(vectors_np)
 
     # Build the Faiss index
-    index = faiss.IndexFlatL2(dimension)  # Create a Faiss index with L2 (Euclidean) distance metric
+    #index = faiss.IndexFlatL2(dimension)  # Create a Faiss index with L2 (Euclidean) distance metric
+    index = faiss.IndexFlatIP(dimension)
     index.add(vectors_np)  # Add the data vectors to the index
     
     return wine, index 
@@ -44,14 +45,23 @@ def get_predictions(query_text):
     # D will contain squared L2 distances between the query vector and its neighbors.
     # I will contain the indices of the nearest neighbors in the dataset.
     D, I = index.search(np.array([query_vector]), k)
-
+    similarity_scores = D[0]
+    
     # Get labels of the neighbors
     # neighbor_labels = [knn_labels[i] for i in I[0]]
-
+    
     # Extract rows from the wine DataFrame
     result = wine.iloc[I[0]]
+    result_df = result[['title', 'description', 'variety', 'province']]
+    result_df['Similarity Score'] = similarity_scores
+    result_df = result_df.rename(columns={
+        'title': 'Wine Name',
+        'description': 'Description',
+        'province': 'Province',
+        'variety': 'Grape Variety'
+    })
 
-    return result['description'].values
+    return result_df
 
 # Initialize a sentence transformer model
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
