@@ -54,6 +54,11 @@ def get_predictions(query_text):
     result = wine.iloc[I[0]]
     result_df = result[['title', 'description', 'variety', 'province']]
     result_df['Similarity Score'] = similarity_scores
+    
+    # Rearrange columns to make similarity score the first column
+    columns_order = ['Similarity Score', 'title', 'description', 'variety', 'province']
+    result_df = result_df[columns_order]
+    
     result_df = result_df.rename(columns={
         'title': 'Wine Name',
         'description': 'Description',

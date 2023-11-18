@@ -52,3 +52,27 @@ def server(input, output, session):
 # Combine into a shiny app.
 # Note that the variable must be "app".
 app = App(app_ui, server)
+
+"""
+-navbar with image/pictures
+    -a logo: something related to a somollier
+    - static image of wine holding wine glass minimalist
+    -make it animated?
+    Palak
+
+-a realistic banner image
+-the search bar infront of the banner
+-a tagline the search
+-make sure the resutls display underneath the banner
+
+-beautify how we display the results
+-tagline what makes us different?: the power of ML + 130k critics
+-another tab: present the most popular searched wines this week
+    -get their feedback, rate this output thumbs up thumbs down
+    - wine glass standing up, wine glass spilled 
+-pre-stored recommendations for red wines, and white wines, sparkling
+    -filters for the output
+-Visualizaton
+    -wordcloud
+
+"""
