@@ -1,0 +1,4 @@
+Model,Style,Mean Similarity Score
+svc_model,Chardonnay - France,0.21343449
+svc_model,Grüner Veltliner - Austria,0.16462815
+svc_model,Pinot Gris - France,0.17790212

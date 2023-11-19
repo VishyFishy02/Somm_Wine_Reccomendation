@@ -1,0 +1,4 @@
+Model,Style,Mean Similarity Score
+rf_model,Chardonnay - France,0.21343449
+rf_model,Sauvignon Blanc - France,0.19881904
+rf_model,Portuguese White - Portugal,0.18716095

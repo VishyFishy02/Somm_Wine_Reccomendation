@@ -1,0 +1,4 @@
+Model,Style,Mean Similarity Score
+xgb_model,Chardonnay - France,0.21343449
+xgb_model,Portuguese White - Portugal,0.18716095
+xgb_model,Champagne Blend - France,0.17974018
