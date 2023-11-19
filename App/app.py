@@ -1,18 +1,19 @@
 from shiny import App, ui, reactive, render
 from src.modelFunctions import get_predictions
 import pandas as pd
-import shinyswatch
 from pathlib import Path
 
 css_path = Path(__file__).parent/ "www" /"my-style.css"
 
 # Part 1: ui ----
 app_ui = ui.page_fluid(
+    ui.img(src="/Somm_Wine_Reccomendation/app/placeholderLogo.jpg"),
     ui.include_css(css_path),
-    #shinyswatch.theme.lux(),
+    ui.navset_tab(
+        ui.nav("SOMM")),
     ui.div(
         ui.panel_title("Somm Wine Reccomendation Engine", window_title="Somm"),
-        class_="centered-text title-margin"
+        class_="logo-text title-margin"
     ),
     ui.div(
         ui.input_text("user_query",
