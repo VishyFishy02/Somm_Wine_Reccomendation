@@ -4,27 +4,36 @@ import pandas as pd
 from pathlib import Path
 
 css_path = Path(__file__).parent/ "www" /"my-style.css"
-
+www_dir =  Path(__file__).parent/ "www"
 # Part 1: ui ----
 app_ui = ui.page_fluid(
-    ui.img(src="/Somm_Wine_Reccomendation/app/placeholderLogo.jpg"),
     ui.include_css(css_path),
-    ui.navset_tab(
-        ui.nav("SOMM")),
     ui.div(
-        ui.panel_title("Somm Wine Reccomendation Engine", window_title="Somm"),
-        class_="logo-text title-margin"
+        ui.img(src="logo.png", class_="logo-image", height="20", width="auto"),
+        ui.page_navbar(
+            title="Som·me·lier: a wine steward.",
+            bg="#6f1414"
+        ),
+        class_= "navbar"
     ),
-    ui.div(
-        ui.input_text("user_query",
-                 "Describe your wine",
-                  value='',
-                  width='400px', 
-                  placeholder="A fruity wine with notes of plum", 
-                  autocomplete='off', 
-                  spellcheck='true'),
-        ui.input_action_button(id='submit', label='Submit', class_= "submit-button"),
-        class_="centered-container"
+    ui.div( # outer banner div
+        ui.div(
+            ui.panel_title("Somm Wine Recommendation Engine", window_title="Somm"),
+            class_="title-text title-margin"
+        ),
+        ui.div( # inner searchbar div
+            ui.input_text("user_query",
+                    "The power of 130k wine experts and AI",
+                    value='',
+                    width='400px', 
+                    placeholder="A fruity wine with notes of plum", 
+                    autocomplete='off', 
+                    spellcheck='true'),
+            ui.input_action_button(id='submit', label='Submit', class_= "submit-button"),
+            class_="search-container"
+        ),
+        class_="centered-container",
+        style="background-image: url('banner3.png'); background-size: cover;"
     ),
     ui.output_table("recommendation"),
 )
@@ -52,7 +61,7 @@ def server(input, output, session):
 
 # Combine into a shiny app.
 # Note that the variable must be "app".
-app = App(app_ui, server)
+app = App(app_ui, server, static_assets=www_dir)
 
 """
 -navbar with image/pictures
