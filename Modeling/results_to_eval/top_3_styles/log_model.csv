@@ -1,0 +1,4 @@
+Model,Style,Mean Similarity Score
+log_model,Chardonnay - France,0.21343449
+log_model,Portuguese White - Portugal,0.18716095
+log_model,Grüner Veltliner - Austria,0.16462815
