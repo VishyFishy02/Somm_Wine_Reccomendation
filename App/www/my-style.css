@@ -78,8 +78,37 @@ h2{
 }
 
 input[type=text]:focus {
-    outline-color: #8B0000
+    outline-color: #6f1414
 }
+
+/* Centering the tab headers */
+.nav-tabs {
+    display: flex;
+    justify-content: center; /* Aligns the tabs in the center */
+    padding-left: 0; /* Removes default padding */
+    margin-bottom: 0; /* Optional: Adjusts spacing below the tabs */
+}
+
+.nav-tabs .nav-item .nav-link {
+    background-color: #f2f2f2; /* Example background color */
+    color: #333; /* Example text color */
+    padding: 10px 15px; /* Padding inside the tab */
+    margin-right: 5px; /* Space between tabs */
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    /* Styles for the active tab */
+    background-color: #6f1414; /* Darker background for active tab */
+    color: #fff; /* Light text color for active tab */
+    border-color: #6f1414; /* Border color for active tab */
+}
+
+.tab-content {
+    /* Styles for the tab content container */
+    padding: 15px; /* Padding inside the content area */
+}
+
+
 
 
 @media screen and (max-width:768px){
