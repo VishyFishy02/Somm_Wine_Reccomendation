@@ -206,20 +206,6 @@ def load_embeddings_and_rag(config_data):
         )
     )
 
-    """
-    qa_style = RetrievalQA.from_chain_type(
-        llm=llm,
-        chain_type="stuff",  # The "stuff" chain type is one of the document chains in Langchain.
-                            # It is the most straightforward chain type for working with documents.
-                            # The StuffDocumentsChain takes a list of documents, inserts them all into a prompt,
-                            # and passes that prompt to a language model.
-                            # The language model generates a response based on the combined documents.
-        retriever=compression_retriever_100, # Use our compression_retriever with Cohere Rerank
-        return_source_documents=True,
-        verbose=False,
-        chain_type_kwargs = chain_type_kwargs
-    )
-    """
     return qa_wine, compression_retriever_100
 
 def get_predictions(query_text):
