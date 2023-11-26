@@ -1,5 +1,8 @@
 # Config file
 config.json
+
+# embeddings
+description_embeddings.pt
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
