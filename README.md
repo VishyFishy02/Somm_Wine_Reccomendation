@@ -34,7 +34,7 @@ While other wine recommendation apps (Vivino, Delectable) do so based on wine in
 
 
 ### Data and EDA
-We obtained the [dataset](https://www.kaggle.com/datasets/zynicide/wine-reviews) from Kaggle, it contains 130k rows of wine reviews, together with information on price, region, grape variety etc. The data was scraped from [WineEnthusiast](wineenthusiast.com/?s=&drink_type=wine) during the week of June 15th, 2017.
+We obtained the [dataset](https://www.kaggle.com/datasets/zynicide/wine-reviews) from Kaggle, it contains 130k rows of wine reviews, together with information on price, region, grape variety etc. The data was scraped from [WineEnthusiast](https://wineenthusiast.com/?s=&drink_type=wine) during the week of June 15th, 2017.
 
 - We cleaned the data and preprocessed to have a reliable dataset, while reducing imbalance between wine styles (important for classification models)
 - Main tools: pandas, matplotlib, seaborn, NLP features (spaCy)
