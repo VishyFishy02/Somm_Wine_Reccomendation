@@ -1,7 +1,8 @@
 # **Somm**
 
 
-Som·me·lier: a wine steward /ˌsəməlˈyā/
+Som·me·lier /ˌsəməlˈyā/: a wine steward 
+
 
 https://github.com/VishyFishy02/Somm_Wine_Reccomendation/assets/57776597/a1d6fdde-168e-4b31-a7cd-3855976d4251
 
