@@ -6,7 +6,7 @@ Som·me·lier /ˌsəməlˈyā/: a wine steward
 
 https://github.com/VishyFishy02/Somm_Wine_Reccomendation/assets/57776597/a1d6fdde-168e-4b31-a7cd-3855976d4251
 
-Our goal with this project is to build a wine recommendation engine to help users search for wines that fit their tastes.
+In this project we built a wine recommendation engine to help users search for wines that fit their tastes.
 
 ## Deliverables
 When the user enters a free-form search phrase that describes wine flavors or characteristics, Somm will return two outputs:
@@ -55,7 +55,7 @@ Then we consider two main modelling approaches:
 Comparing these two approaches against a baseline KNN search model, RAG is the best performer for both deliverables!
 
 
-|Model| Wine Recs<br>Mean Relevance<br>(1 to 5) | Style Recs<br>Mean Similarity<br>(-1 to 1)|
+|Model| Top 5 Wine Recs<br>Mean Relevance<br>(1 to 5) | Top 3 Style Recs<br>Mean Similarity<br>(-1 to 1)|
 |---|:---:|:---:|
 |Baseline KNN Search| 4.49 | 0.8274 |
 |Classification (XGBoost) | 4.34 | 0.8261 |
