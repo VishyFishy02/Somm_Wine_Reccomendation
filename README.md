@@ -37,7 +37,7 @@ While other wine recommendation apps (Vivino, Delectable) do so based on wine in
 We obtained the [dataset](https://www.kaggle.com/datasets/zynicide/wine-reviews) from Kaggle, it contains 130k rows of wine reviews, together with information on price, region, grape variety etc. The data was scraped from [WineEnthusiast](wineenthusiast.com/?s=&drink_type=wine) during the week of June 15th, 2017.
 
 - We cleaned the data and preprocessed to have a reliable dataset, while reducing imbalance between wine styles (important for classification models)
-- Main tools: pandas, matplotlib, seaborn, NLP features (spaCy)
+- Main tools: pandas, matplotlib, seaborn, NLP tools (spaCy)
 
 ### Modelling
 
@@ -49,8 +49,8 @@ Then we consider two main modelling approaches:
     - Use various classification algorithms to classify wines by styles based on text embeddings of wine reviews, then filter for 5 best-fit wines among 3 most likely styles.
  
 - **Retrieval Augmented Generation (RAG) pipline**: 
-    - Combine similarity-based index search, reranking, and LLM (with chat history) to return 5 best-fit wines. 
-    - Top 3 most popular styles are also filtered from the reranked documents.
+    - Combine similarity search, reranking, and LLM (with memory) to return 5 best-fit wines. 
+    - Top 3 most popular styles are also obtained from the reranked documents.
 
 Comparing these two approaches against a baseline KNN search model, RAG is the best performer for both deliverables!
 
@@ -62,7 +62,7 @@ Comparing these two approaches against a baseline KNN search model, RAG is the b
 |RAG| 4.84 | 0.8269 |
 
 
-- Main tools: OpenAI Embedding (ada-002), Scikit-Learn, XGBoost, LangChain, Cohere Reranker, Pinecone, LLM (OpenAI gpt-4-1106-preview)
+- Main tools: OpenAI Text Embedding Model (ada-002), SciKit-Learn, XGBoost, LangChain, Cohere Rerank, Pinecone, LLM (OpenAI gpt-4-1106-preview).
 
 
 ### Installation and Usage
