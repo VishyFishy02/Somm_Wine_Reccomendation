@@ -1,4 +1,4 @@
-![Demo3 -](https://github.com/VishyFishy02/Somm_Wine_Reccomendation/assets/57776597/2cf898bc-a1de-4083-9109-0efd5fc7ea58)# Somm_Wine_Reccomendation
+Somm_Wine_Reccomendation
 Som·me·lier: a wine steward /ˌsəməlˈyā/
 
 Our goal with this project is to build a wine recommendation engine to help users search for wines that fit their taste.
@@ -37,7 +37,10 @@ We obtained the [dataset](https://www.kaggle.com/datasets/zynicide/wine-reviews)
 ### Modelling
 
 ### Find your Wine
-![Demo3 -](https://github.com/VishyFishy02/Somm_Wine_Reccomendation/assets/57776597/6c212d73-0b8a-4b5b-8482-fb9235141508)
+
+
+https://github.com/VishyFishy02/Somm_Wine_Reccomendation/assets/57776597/a1d6fdde-168e-4b31-a7cd-3855976d4251
+
 
 
 
