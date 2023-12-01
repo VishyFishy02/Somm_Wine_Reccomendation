@@ -50,7 +50,7 @@ Then we consider two main modelling approaches:
  
 - **Retrieval Augmented Generation (RAG) pipline**: 
     - Combine similarity search, reranking, and LLM (with memory) to return 5 best-fit wines. 
-    - Top 3 most popular styles are also obtained from the reranked documents.
+    - Top 3 most popular styles are also obtained from the reranked wines.
 
 Comparing these two approaches against a baseline KNN search model, RAG is the best performer for both deliverables!
 
