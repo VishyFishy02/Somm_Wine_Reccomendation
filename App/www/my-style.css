@@ -1,5 +1,5 @@
 body{
-    font-family: 'Merriweather', serif;
+    font-family: 'Lato', serif;
 }
 h2{
     font-weight: 600; 
@@ -25,7 +25,7 @@ h2{
 
 .title-text {
     font-size: 72px; /* Adjust size as needed */
-    font-weight: 900;
+    font-weight: 700;
     text-align: center;
 
 }
@@ -106,6 +106,12 @@ input[type=text]:focus {
 .tab-content {
     /* Styles for the tab content container */
     padding: 15px; /* Padding inside the content area */
+}
+
+.styles-table {
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 

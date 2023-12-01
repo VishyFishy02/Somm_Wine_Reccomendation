@@ -8,6 +8,12 @@ css_path = Path(__file__).parent/ "www" /"my-style.css"
 www_dir =  Path(__file__).parent/ "www"
 # Part 1: ui ----
 app_ui = ui.page_fluid(
+    ui.tags.head(
+        ui.tags.link(
+                rel="stylesheet", 
+                href="https://fonts.googleapis.com/css?family=Lato:400,700"
+            )
+    ),
     ui.include_css(css_path),
     ui.div(
         ui.img(src="logo.png", class_="logo-image", height="20", width="auto"),
@@ -30,7 +36,7 @@ app_ui = ui.page_fluid(
                     placeholder="A fruity wine with notes of plum", 
                     autocomplete='off', 
                     spellcheck='true'),
-            ui.input_action_button(id='submit', label='Submit', class_= "submit-button"),
+            ui.input_action_button(id='submit', label='Enter', class_= "submit-button"),
             class_="search-container"
         ),
         class_="centered-container",
@@ -38,10 +44,9 @@ app_ui = ui.page_fluid(
     ),
     ui.navset_tab(
         ui.nav("Wines", ui.output_table("recommendation")),
-        ui.nav("Styles", ui.output_table("styles")),
+        ui.nav("Styles", ui.output_table("styles", align="center", class_="styles-table")),
         id="data_tabs"
     ),
-    # ui.output_ui("recommendation")
 )
 # Part 2: server ----
 # coordinates inputs and outputs
