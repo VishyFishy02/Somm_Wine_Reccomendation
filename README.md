@@ -73,8 +73,6 @@ Comparing these two approaches against a baseline KNN search model, RAG is the b
 - [Git](https://git-scm.com/downloads) for cloning the repository.
 - OpenAI API key, Pinecone API key, and Cohere API key. Sign up at [OpenAI](https://openai.com/), [Pinecone](https://www.pinecone.io/), and [Cohere](https://www.cohere.ai/) to obtain these keys.
 
-#### Configuration
-#### Installing dependencies
 #### Cloning the Repository
 
 Clone the repository to your local machine by running:
