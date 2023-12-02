@@ -78,8 +78,8 @@ Comparing these two approaches against a baseline KNN search model, RAG is the b
 Clone the repository to your local machine by running:
 
 ```bash
-git clone https://github.com/VishyFishy02/Somm_Wine_Reccomendation
-cd Somm wine Reccomendation
+git clone https://github.com/VishyFishy02/Somm_Wine_Recommendation
+cd Somm wine Recommendation
 pip install-r requirements.txt
 ```
 
