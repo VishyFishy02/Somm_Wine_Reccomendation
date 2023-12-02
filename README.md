@@ -34,10 +34,10 @@ While other wine recommendation apps (Vivino, Delectable) do so based on wine in
 
 
 ### Data and EDA
-We obtained the [dataset](https://www.kaggle.com/datasets/zynicide/wine-reviews) from Kaggle, it contains 130k rows of wine reviews, together with information on price, region, grape variety etc. The data was scraped from [WineEnthusiast](wineenthusiast.com/?s=&drink_type=wine) during the week of June 15th, 2017.
+We obtained the [dataset](https://www.kaggle.com/datasets/zynicide/wine-reviews) from Kaggle, it contains 130k rows of wine reviews, together with information on price, region, grape variety etc. The data was scraped from [WineEnthusiast](https://wineenthusiast.com/?s=&drink_type=wine) during the week of June 15th, 2017.
 
 - We cleaned the data and preprocessed to have a reliable dataset, while reducing imbalance between wine styles (important for classification models)
-- Main tools: pandas, matplotlib, seaborn, NLP features (spaCy)
+- Main tools: pandas, matplotlib, seaborn, NLP tools (spaCy)
 
 ### Modelling
 
@@ -45,12 +45,12 @@ We start with converting unstructured text data in wine reviews to high dimensio
 
 Then we consider two main modelling approaches:
 
-- **Classification**: 
+- [**Classification**](Modeling/Classification_algorithms.ipynb): 
     - Use various classification algorithms to classify wines by styles based on text embeddings of wine reviews, then filter for 5 best-fit wines among 3 most likely styles.
  
-- **Retrieval Augmented Generation (RAG) pipline**: 
-    - Combine similarity-based index search, reranking, and LLM (with chat history) to return 5 best-fit wines. 
-    - Top 3 most popular styles are also filtered from the reranked documents.
+- [**Retrieval Augmented Generation (RAG) pipline**](Modeling/Wine_Recommender_RAG_Langchain_Pinecone_OpenAI_Cohere.ipynb): 
+    - Combine similarity search, reranking, and LLM (with memory) to return 5 best-fit wines. 
+    - Top 3 most popular styles are also obtained from the reranked wines.
 
 Comparing these two approaches against a baseline KNN search model, RAG is the best performer for both deliverables!
 
@@ -62,10 +62,33 @@ Comparing these two approaches against a baseline KNN search model, RAG is the b
 |RAG| 4.84 | 0.8269 |
 
 
-- Main tools: OpenAI Embedding (ada-002), Scikit-Learn, XGBoost, LangChain, Cohere Reranker, Pinecone, LLM (OpenAI gpt-4-1106-preview)
+- Main tools: OpenAI Text Embedding Model (ada-002), SciKit-Learn, XGBoost, LangChain, Cohere Rerank, Pinecone, LLM (OpenAI gpt-4-1106-preview).
 
 
 ### Installation and Usage
+
+#### Prerequisites
+
+- Python 3.8 or later.
+- [Git](https://git-scm.com/downloads) for cloning the repository.
+- OpenAI API key, Pinecone API key, and Cohere API key. Sign up at [OpenAI](https://openai.com/), [Pinecone](https://www.pinecone.io/), and [Cohere](https://www.cohere.ai/) to obtain these keys.
+
+#### Cloning the Repository
+
+Clone the repository to your local machine by running:
+
+```bash
+git clone https://github.com/VishyFishy02/Somm_Wine_Reccomendation
+cd Somm wine Reccomendation
+pip install-r requirements.txt
+```
+
+#### Configuration
+Set up your API keys as environment variables or throw them in a config.json
+set OPENAI_API_KEY='your_openai_api_key'
+set PINECONE_API_KEY='your_pinecone_api_key'
+set COHERE_API_KEY='your_cohere_api_key'
+
 
 This project was developed during our Data Science Boot Camp Fall 2023 at the Erdos Institute.
 
