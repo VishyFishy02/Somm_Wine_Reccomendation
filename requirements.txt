@@ -1,0 +1,8 @@
+shiny
+pandas
+pathlib
+openai
+pinecone-client
+tdqm
+langchain
+cohere
