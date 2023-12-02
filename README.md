@@ -73,6 +73,8 @@ Comparing these two approaches against a baseline KNN search model, RAG is the b
 - [Git](https://git-scm.com/downloads) for cloning the repository.
 - OpenAI API key, Pinecone API key, and Cohere API key. Sign up at [OpenAI](https://openai.com/), [Pinecone](https://www.pinecone.io/), and [Cohere](https://www.cohere.ai/) to obtain these keys.
 
+#### Configuration
+#### Installing dependencies
 #### Cloning the Repository
 
 Clone the repository to your local machine by running:
@@ -80,11 +82,8 @@ Clone the repository to your local machine by running:
 ```bash
 git clone https://github.com/VishyFishy02/Somm_Wine_Reccomendation
 cd Somm wine Reccomendation
-
-pip install -r requirements.txt
-
-#### Installing Dependencies
 pip install-r requirements.txt
+```
 
 #### Configuration
 Set up your API keys as environment variables or throw them in a config.json
