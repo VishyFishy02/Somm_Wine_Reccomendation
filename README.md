@@ -48,7 +48,7 @@ Then we consider two main modelling approaches:
 - [**Classification**](Modeling/Classification_algorithms.ipynb): 
     - Use various classification algorithms to classify wines by styles based on text embeddings of wine reviews, then filter for 5 best-fit wines among 3 most likely styles.
  
-- [**Retrieval Augmented Generation (RAG) pipline**](Modeling/Wine_Recommender_RAG_Langchain_Pinecone_OpenAI_Cohere.ipynb): 
+- [**Retrieval Augmented Generation (RAG) pipeline**](Modeling/Wine_Recommender_RAG_Langchain_Pinecone_OpenAI_Cohere.ipynb): 
     - Combine similarity search, reranking, and LLM (with memory) to return 5 best-fit wines. 
     - Top 3 most popular styles are also obtained from the reranked wines.
 
